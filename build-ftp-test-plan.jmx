@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.9" jmeter="3.0 r1743807">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="build-ftp-test-plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="wcss.pl" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1373791853000</longProp>
+        <longProp name="ThreadGroup.end_time">1373791853000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConfigTestElement guiclass="FtpConfigGui" testclass="ConfigTestElement" testname="FTP Request Defaults" enabled="true">
+          <stringProp name="FTPSampler.server">ftp.up.pt</stringProp>
+          <stringProp name="FTPSampler.port"></stringProp>
+          <stringProp name="FTPSampler.filename"></stringProp>
+          <stringProp name="FTPSampler.localfilename"></stringProp>
+          <stringProp name="FTPSampler.inputdata"></stringProp>
+          <boolProp name="FTPSampler.binarymode">true</boolProp>
+          <boolProp name="FTPSampler.saveresponse">false</boolProp>
+          <boolProp name="FTPSampler.upload">false</boolProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <FTPSampler guiclass="FtpTestSamplerGui" testclass="FTPSampler" testname="fedora24" enabled="true">
+          <stringProp name="FTPSampler.server"></stringProp>
+          <stringProp name="FTPSampler.port"></stringProp>
+          <stringProp name="FTPSampler.filename">/fedora/releases/24/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-24-1.2.iso</stringProp>
+          <stringProp name="FTPSampler.localfilename"></stringProp>
+          <stringProp name="FTPSampler.inputdata"></stringProp>
+          <boolProp name="FTPSampler.binarymode">true</boolProp>
+          <boolProp name="FTPSampler.saveresponse">false</boolProp>
+          <boolProp name="FTPSampler.upload">false</boolProp>
+          <stringProp name="ConfigTestElement.username">anonymous</stringProp>
+          <stringProp name="ConfigTestElement.password">rbadri24@gmail.com</stringProp>
+        </FTPSampler>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">C:\Users\badri\Downloads\apache-jmeter-3.0\apache-jmeter-3.0\results\halifax-rwth-auchen-de\result4.txt</stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="FTP Users" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1373791853000</longProp>
+        <longProp name="ThreadGroup.end_time">1373791853000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConfigTestElement guiclass="FtpConfigGui" testclass="ConfigTestElement" testname="FTP Request Defaults" enabled="true">
+          <stringProp name="FTPSampler.server">ftp.up.pt</stringProp>
+          <stringProp name="FTPSampler.port"></stringProp>
+          <stringProp name="FTPSampler.filename"></stringProp>
+          <stringProp name="FTPSampler.localfilename"></stringProp>
+          <stringProp name="FTPSampler.inputdata"></stringProp>
+          <boolProp name="FTPSampler.binarymode">true</boolProp>
+          <boolProp name="FTPSampler.saveresponse">false</boolProp>
+          <boolProp name="FTPSampler.upload">false</boolProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <FTPSampler guiclass="FtpTestSamplerGui" testclass="FTPSampler" testname="fedora24" enabled="true">
+          <stringProp name="FTPSampler.server"></stringProp>
+          <stringProp name="FTPSampler.port"></stringProp>
+          <stringProp name="FTPSampler.filename">/fedora/releases/24/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-24-1.2.iso</stringProp>
+          <stringProp name="FTPSampler.localfilename"></stringProp>
+          <stringProp name="FTPSampler.inputdata"></stringProp>
+          <boolProp name="FTPSampler.binarymode">true</boolProp>
+          <boolProp name="FTPSampler.saveresponse">false</boolProp>
+          <boolProp name="FTPSampler.upload">false</boolProp>
+          <stringProp name="ConfigTestElement.username">anonymous</stringProp>
+          <stringProp name="ConfigTestElement.password">rbadri24@gmail.com</stringProp>
+        </FTPSampler>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">C:\Users\badri\Downloads\apache-jmeter-3.0\apache-jmeter-3.0\results\halifax-rwth-auchen-de\result4.txt</stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="FTP Users" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1373791853000</longProp>
+        <longProp name="ThreadGroup.end_time">1373791853000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConfigTestElement guiclass="FtpConfigGui" testclass="ConfigTestElement" testname="FTP Request Defaults" enabled="true">
+          <stringProp name="FTPSampler.server">ftp.up.pt</stringProp>
+          <stringProp name="FTPSampler.port"></stringProp>
+          <stringProp name="FTPSampler.filename"></stringProp>
+          <stringProp name="FTPSampler.localfilename"></stringProp>
+          <stringProp name="FTPSampler.inputdata"></stringProp>
+          <boolProp name="FTPSampler.binarymode">true</boolProp>
+          <boolProp name="FTPSampler.saveresponse">false</boolProp>
+          <boolProp name="FTPSampler.upload">false</boolProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <FTPSampler guiclass="FtpTestSamplerGui" testclass="FTPSampler" testname="fedora24" enabled="true">
+          <stringProp name="FTPSampler.server"></stringProp>
+          <stringProp name="FTPSampler.port"></stringProp>
+          <stringProp name="FTPSampler.filename">/fedora/releases/24/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-24-1.2.iso</stringProp>
+          <stringProp name="FTPSampler.localfilename"></stringProp>
+          <stringProp name="FTPSampler.inputdata"></stringProp>
+          <boolProp name="FTPSampler.binarymode">true</boolProp>
+          <boolProp name="FTPSampler.saveresponse">false</boolProp>
+          <boolProp name="FTPSampler.upload">false</boolProp>
+          <stringProp name="ConfigTestElement.username">anonymous</stringProp>
+          <stringProp name="ConfigTestElement.password">rbadri24@gmail.com</stringProp>
+        </FTPSampler>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">C:\Users\badri\Downloads\apache-jmeter-3.0\apache-jmeter-3.0\results\halifax-rwth-auchen-de\result4.txt</stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="FTP Users" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1373791853000</longProp>
+        <longProp name="ThreadGroup.end_time">1373791853000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConfigTestElement guiclass="FtpConfigGui" testclass="ConfigTestElement" testname="FTP Request Defaults" enabled="true">
+          <stringProp name="FTPSampler.server">ftp.up.pt</stringProp>
+          <stringProp name="FTPSampler.port"></stringProp>
+          <stringProp name="FTPSampler.filename"></stringProp>
+          <stringProp name="FTPSampler.localfilename"></stringProp>
+          <stringProp name="FTPSampler.inputdata"></stringProp>
+          <boolProp name="FTPSampler.binarymode">true</boolProp>
+          <boolProp name="FTPSampler.saveresponse">false</boolProp>
+          <boolProp name="FTPSampler.upload">false</boolProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <FTPSampler guiclass="FtpTestSamplerGui" testclass="FTPSampler" testname="fedora24" enabled="true">
+          <stringProp name="FTPSampler.server"></stringProp>
+          <stringProp name="FTPSampler.port"></stringProp>
+          <stringProp name="FTPSampler.filename">/fedora/releases/24/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-24-1.2.iso</stringProp>
+          <stringProp name="FTPSampler.localfilename"></stringProp>
+          <stringProp name="FTPSampler.inputdata"></stringProp>
+          <boolProp name="FTPSampler.binarymode">true</boolProp>
+          <boolProp name="FTPSampler.saveresponse">false</boolProp>
+          <boolProp name="FTPSampler.upload">false</boolProp>
+          <stringProp name="ConfigTestElement.username">anonymous</stringProp>
+          <stringProp name="ConfigTestElement.password">rbadri24@gmail.com</stringProp>
+        </FTPSampler>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">C:\Users\badri\Downloads\apache-jmeter-3.0\apache-jmeter-3.0\results\halifax-rwth-auchen-de\result4.txt</stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
